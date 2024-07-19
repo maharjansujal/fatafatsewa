@@ -1,0 +1,20 @@
+tailwind css activation
+
+npm install -D tailwindcss
+npx tailwindcss init
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./html/index.html"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+input.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+npx tailwindcss -i ./style.css -o ./output.css --watch

@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "OutfitRegular";
+  src: url(/font/OutfitRegular.ttf);
+}
+@font-face {
+  font-family: "OutfitBold";
+  src: url(/font/OutfitExtraBold.ttf);
+}
+@font-face {
+  font-family: "SplineSans";
+  src: url(/font/SplineSans-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "OutfitRegular", Arial, sans-serif;
+}
+
+.banner {
+  width: 100%;
+  height: 40vh;
+  background-color: #3b82f6;
+  margin-top: 10vh;
+  font-weight: 700;
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.banner .banner-text {
+  width: 45%;
+  height: 60%;
+  background-color: #3b82f6;
+  margin-left: 10vh;
+}
+.banner .banner-text .banner-large-text-1 {
+  color: rgb(16, 16, 16);
+  font-size: 48px;
+  width: 100%;
+  line-height: 48px;
+  font-weight: 700px;
+}
+.banner .banner-text .banner-small-text {
+  float: left;
+  color: black;
+  font-size: 20px;
+  width: 10%;
+  margin-top: 4vh;
+}
+.banner .banner-text .banner-large-text-2 {
+  float: left;
+  color: black;
+  font-size: 48px;
+  width: 80%;
+}
+.banner .banner-image {
+  width: 55%;
+  height: 100%;
+}
+.banner .banner-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.long-paragraph {
+  color: black;
+  font-size: 16px;
+  width: 85%;
+  font-family: "SplineSans";
+  line-height: 24px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.scroller-container {
+  width: 800px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.scroller-container .scroller-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.scroller-container .image {
+  min-width: 200px;
+  height: 90px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.scroller-container .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.Faq-blue-box-with-image {
+  display: flex;
+  width: 85%;
+  height: 55vh;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.Faq-blue-box-with-image .Faq-blue-box {
+  width: 65%;
+  height: 100%;
+  background-color: #3b82f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Faq-blue-box-with-image .Faq-blue-box .blue-box-image {
+  width: 40%;
+}
+.Faq-blue-box-with-image .Faq-blue-box .blue-box-text {
+  width: 90%;
+  height: 90%;
+  align-items: center;
+  justify-content: center;
+}
+.Faq-blue-box-with-image .Faq-blue-box .blue-box-text .blue-box-title {
+  height: 15%;
+  margin-top: 20px;
+  font-style: "OutfitRegular";
+  font-weight: 700;
+  line-height: 36px;
+  color: black;
+  font-size: 30px;
+  width: 100%;
+}
+.Faq-blue-box-with-image .Faq-blue-box .blue-box-text .blue-box-white-paragraph {
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  font-family: "SplineSans";
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+.Faq-blue-box-with-image .blue-box-image {
+  width: 40%;
+  height: 100%;
+}
+.Faq-blue-box-with-image .blue-box-image img {
+  width: auto;
+  height: 100%;
+}/*# sourceMappingURL=style.css.map */

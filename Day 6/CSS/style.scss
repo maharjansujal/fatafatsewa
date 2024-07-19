@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Lexend';
+    src: url('/LexendDecaRegular.ttf');
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: url('/OpenSans-Regular.ttf');
+}
+img{
+    margin-bottom: 50px;
+}
+.overview{
+    // display: flex;
+    // flex-direction: column;
+    // align-content: space-evenly;
+    width: 70%;
+    background-color: white;
+    margin: 0 5%;
+    padding: 20px;
+    border-radius: 15px;
+    .txt{
+        display: flex;
+        flex-direction: column;
+        .delivery-options-overview{
+            font-size: 40px;
+            font-weight: 400;
+            font-family: 'Lexend';
+            padding: 20px;
+        }
+        .delivery-options-overview-paragraph{
+            font-size: 20px;
+            font-family: 'OpenSans';
+            padding: 20px;
+            color: #817f7a;
+        }
+    }
+    .steps{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        .doop-div{
+            background-color: #f6f6f6;
+            width: 250px;
+            height: 350px;
+            border-radius: 15px;
+            padding:10px 5px;
+            text-align: center;
+            font-size: 20px;
+            font-family: 'OpenSans';
+            font-weight: 400;
+        }
+    }
+}

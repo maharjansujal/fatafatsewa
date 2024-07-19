@@ -1,0 +1,70 @@
+@mixin Div-styling($font-color, $font-size, $div-width) {
+  color: $font-color;
+  font-size: $font-size;
+  width: $div-width;
+}
+@font-face {
+  font-family: "OutfitRegular";
+  src: url(/font/OutfitRegular.ttf);
+}
+@font-face {
+  font-family: "OutfitBold";
+  src: url(/font/OutfitExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "SplineSans";
+  src: url(/font/SplineSans-Regular.ttf);
+}
+
+.Faq-blue-box-with-image {
+  display: flex;
+  width: 100%;
+  max-width: 1348px;
+  margin-bottom: 50px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  .Faq-blue-box {
+    background-color: blue;
+    // width: auto;
+    max-width: 1000px;
+    // height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // display: block;
+    .blue-box-text {
+      width: 90%;
+      height: 90%;
+      align-items: center;
+      justify-content: center;
+
+      .blue-box-title {
+        height: 15%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-family: "OutfitRegular";
+        font-weight: 700;
+        line-height: 36px;
+        @include Div-styling(black, 30px, 100%);
+      }
+
+      .blue-box-white-paragraph {
+        @include Div-styling(white, 16px, 100%);
+        font-family: "SplineSans";
+        font-weight: 400;
+        line-height: 26px;
+        // margin-top: 5px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+.blue-box-image {
+  // background-color: yellow;
+  width: 412px;
+  display: block;
+  height: 290px;
+}

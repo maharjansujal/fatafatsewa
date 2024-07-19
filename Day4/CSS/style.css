@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "OutfitRegular";
+  src: url(/font/OutfitRegular.ttf);
+}
+@font-face {
+  font-family: "OutfitBold";
+  src: url(/font/OutfitExtraBold.ttf);
+}
+@font-face {
+  font-family: "SplineSans";
+  src: url(/font/SplineSans-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "OutfitRegular", Arial, sans-serif;
+}
+
+body {
+  max-width: 1348px;
+  margin: 0 auto;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+}
+.banner-image img {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px 10px;
+}
+
+.long-paragraph {
+  color: black;
+  font-size: 16px;
+  width: 85%;
+  font-family: "SplineSans";
+  line-height: 24px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.scroller-container {
+  width: 800px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.scroller-container .scroller-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.scroller-container .image {
+  min-width: 200px;
+  height: 90px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.scroller-container .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.Faq-blue-box-with-image {
+  display: flex;
+  max-width: 100%;
+  height: 55vh;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.Faq-blue-box-with-image .Faq-blue-box {
+  width: 65%;
+  height: 100%;
+  background-color: #3b82f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Faq-blue-box-with-image .Faq-blue-box .blue-box-image {
+  width: 40%;
+}
+.Faq-blue-box-with-image .Faq-blue-box .blue-box-text {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.Faq-blue-box-with-image .Faq-blue-box .blue-box-text .blue-box-title {
+  height: 15%;
+  margin-top: 20px;
+  font-style: "OutfitRegular";
+  font-weight: 700;
+  line-height: 36px;
+  color: black;
+  font-size: 30px;
+  width: 100%;
+}
+.Faq-blue-box-with-image .Faq-blue-box .blue-box-text .blue-box-white-paragraph {
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  font-family: "SplineSans";
+  font-weight: 400;
+  line-height: 26px;
+  flex: 1;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.Faq-blue-box-with-image .blue-box-image {
+  width: 40%;
+  height: 100%;
+}
+.Faq-blue-box-with-image .blue-box-image img {
+  width: auto;
+  height: 100%;
+}
+
+@media (max-width: 670px) {
+  .blue-box-image img {
+    display: none;
+  }
+  .blue-box-title {
+    font-size: 15px;
+  }
+  .blue-box-white-paragraph {
+    font-size: 8px;
+  }
+  .Faq-blue-box {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

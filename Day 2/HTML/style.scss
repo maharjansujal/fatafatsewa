@@ -1,0 +1,29 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.scroller-container {
+  width: 800px; /* Adjust to fit the width for 4 numbers */
+  overflow: hidden;
+  // border: 1px solid #ccc;
+  margin: 20px auto;
+}
+
+.scroller-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image {
+  min-width: 200px; /* Adjust this value to control number box width */
+  height: 90px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  // border-right: 1px solid #ccc;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}

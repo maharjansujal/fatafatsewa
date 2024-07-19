@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "OutfitRegular";
+  src: url(/font/OutfitRegular.ttf);
+}
+@font-face {
+  font-family: "OutfitBold";
+  src: url(/font/OutfitExtraBold.ttf);
+}
+@font-face {
+  font-family: "SplineSans";
+  src: url(/font/SplineSans-Regular.ttf);
+}
+.Faq-blue-box-with-image {
+  display: flex;
+  width: 100%;
+  max-width: 1348px;
+  margin-bottom: 50px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.Faq-blue-box-with-image .Faq-blue-box {
+  background-color: blue;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Faq-blue-box-with-image .Faq-blue-box .blue-box-text {
+  width: 90%;
+  height: 90%;
+  align-items: center;
+  justify-content: center;
+}
+.Faq-blue-box-with-image .Faq-blue-box .blue-box-text .blue-box-title {
+  height: 15%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "OutfitRegular";
+  font-weight: 700;
+  line-height: 36px;
+  color: black;
+  font-size: 30px;
+  width: 100%;
+}
+.Faq-blue-box-with-image .Faq-blue-box .blue-box-text .blue-box-white-paragraph {
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  font-family: "SplineSans";
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+.blue-box-image {
+  width: 412px;
+  display: block;
+  height: 290px;
+}/*# sourceMappingURL=test.css.map */
