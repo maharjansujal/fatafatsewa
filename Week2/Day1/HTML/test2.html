@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details Example</title>
+    <style>
+      details {
+        /* border: 1px solid gray; */
+        /* border-radius: 0.2rem; */
+        padding: 0.5rem;
+      }
+      summary {
+        cursor: pointer; /* Optional: make the summary look clickable */
+        position: relative; /* Required for positioning the arrow */
+        padding-right: 20px; /* Space for the arrow */
+        user-select: none; /* Optional: prevent text selection */
+        list-style-type: none; /* Remove default list-style */
+      }
+      summary::before {
+        content: "\2228"; /* Unicode character for logical OR (∨) */
+        position: absolute;
+        right: 5px; /* Adjust this value to move the symbol horizontally */
+        transition: transform 0.3s ease; /* Optional: smooth transition */
+        transform: scaleX(2); /* Scale horizontally to 150% of its original width */
+      }
+
+      details[open] > summary::before {
+        transform: scaleX(2) rotate(180deg); /* Rotate the arrow when details are open */
+      }
+    </style>
+  </head>
+  <body>
+    <details>
+      <summary>An example</summary>
+      With some example text shown when expanded.
+    </details>
+  </body>
+</html>

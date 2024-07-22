@@ -1,1 +1,14 @@
 node_modules
+src
+.vscode
+package.json
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+*.ico
+*.webp
+package-lock.json
+tailwind.config.js

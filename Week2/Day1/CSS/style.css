@@ -1,0 +1,189 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #f6f6f6;
+}
+
+@font-face {
+  font-family: "Lexend";
+  src: url("/LexendDecaRegular.ttf");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("/OpenSans-Regular.ttf");
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 200px;
+}
+
+.all-explanations {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.big-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+
+.image-div {
+  width: 935px;
+  height: 260px;
+  background-color: black;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.need-help {
+  width: 350px;
+  height: 400px;
+  background-color: white;
+  border-radius: 15px;
+  position: static;
+}
+
+.delivery-options-overview {
+  width: 935px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+}
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  font-weight: bold;
+}
+h3 {
+  transition: 0.5s;
+}
+h3:hover {
+  color: blue;
+}
+
+details {
+  transition: transform 0.3s ease-in-out;
+}
+
+/* details:hover{
+    color: blue;
+  } */
+
+summary {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  list-style-type: none;
+}
+summary::before {
+  content: "\2228";
+  color: gray;
+  position: absolute;
+  right: 20px; /* Adjust this value as needed */
+  transition: transform 0.3s ease;
+  transform: scaleX(2);
+}
+
+/* details[open] summary ~ * {
+    animation: sweep .5s ease-in-out;
+  }
+  
+  @keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+  }
+   */
+details[open] > summary::before {
+  transform: scaleX(2) rotate(180deg);
+}
+hr {
+  width: 95%;
+  border: none;
+  height: 1px;
+  background-image: linear-gradient(to right, #f0f0f0, #e2e2e2, #f0f0f0);
+}
+h1,
+h2,
+details summary,
+p,
+ul li {
+  margin: 20px;
+}
+h1,
+h2 {
+  font-family: "Lexend";
+}
+details p,
+details summary,
+p,
+ul li {
+  font-family: "OpenSans";
+  font-size: 20px;
+}
+i{
+  font-size: 30px;
+}
+.delivery-steps {
+  width: 100%;
+  height: 250px;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 20%;
+  height: 100%;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  text-align: center;
+  font-family: "OpenSans";
+}
+.items img {
+  width: 128px;
+  height: 128px;
+  align-self: center;
+}
+
+.exchange-or-return-of-goods {
+  width: 935px;
+  /* height: 500px; */
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.faq {
+  width: 935px;
+  /* height: 450px; */
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.online-store {
+  width: 935px;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
