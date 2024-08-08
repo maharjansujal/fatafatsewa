@@ -1,0 +1,7 @@
+Day 1: Product cards from json file
+
+Day 2: NPM package manager ko bare padhe, tried to create react coursel (mentor was not available, went home at 3:00 PM)
+
+Day 3: Testing and problem identification of meta version of fatafatsewa website
+
+Day 4: Learnt Github copilot configuration, hosted a git repository in vercel.

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/JS/displayProduct.js"></script>
+  </head>
+  <body>
+    <div class="max-w-6xl mx-auto p-4">
+      <div
+        id="product-container"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      ></div>
+    </div>
+    <div id="pagination" class="flex justify-center gap-4 mt-8">
+      <a href="#" id="previous" class="text-blue-700 py-2 px-4 rounded"
+        >Previous</a
+      >
+      <a
+        href="#"
+        class="page-link text-blue-700 py-2 px-4 rounded"
+        data-page="1"
+        >1</a
+      >
+      <a
+        href="#"
+        class="page-link text-blue-700 py-2 px-4 rounded"
+        data-page="2"
+        >2</a
+      >
+      <a
+        href="#"
+        class="page-link text-blue-700 py-2 px-4 rounded"
+        data-page="3"
+        >3</a
+      >
+      <a href="#" id="next" class="text-blue-700 py-2 px-4 rounded">Next</a>
+    </div>
+    <p id="page-numbers" class="text-center text-lg mt-4"></p>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Data Form</title>
+</head>
+<body>
+    <h2>Submit Data to Day2_3 Table</h2>
+    <form id="nameForm" action="/submit-name" method="POST">
+        <label for="firstname">First Name:</label><br>
+        <input type="text" id="firstname" name="firstName" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

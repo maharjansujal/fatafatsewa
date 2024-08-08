@@ -1,0 +1,5 @@
+day1: optimized individualProduct.html code
+
+day2: Tried to do add to cart logic
+
+day3: learn image optimization, typescript, shadcn, array mapping

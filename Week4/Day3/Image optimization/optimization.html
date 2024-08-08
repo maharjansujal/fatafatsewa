@@ -1,0 +1,67 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Compression</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      button {
+        background: purple;
+        border-radius: 4px;
+        padding: 4px;
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" id="fileInput" accept="image/*" />
+    <br />
+    <canvas id="canvas" style="display: none"></canvas> /* Hidden Canvas Element
+    */
+    <br />
+    <button onclick="compressImage()">Compress</button>
+    <br />
+    <a id="downloadLink" download="compressed_image.jpg" style="display: none"
+      >Download Compressed Image</a
+    >
+
+    <script>
+      function compressImage() {
+        var fileInput = document.getElementById("fileInput");
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var downloadLink = document.getElementById("downloadLink");
+
+        var file = fileInput.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+          var img = new Image();
+          img.onload = function () {
+            canvas.width = img.width; // Set canvas size to the image original size to ensure enough space for the image
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0); // Draw the image onto the canvas without resizing
+
+            canvas.toBlob(
+              function (blob) {
+                var url = URL.createObjectURL(blob);
+                downloadLink.href = url;
+                downloadLink.style.display = "inline";
+              },
+              "image/jpeg",
+              0.1 // Adjust the compression quality here. Possible values are within 0.0 and 1.0.
+            );
+          };
+          img.src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+      }
+    </script>
+  </body>
+</html>
+
+

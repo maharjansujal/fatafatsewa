@@ -9,6 +9,14 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "tailwindcss": "^3.4.6"
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "requirejs": "^2.3.7",
+    "tinify": "^1.7.1"
   }
 }

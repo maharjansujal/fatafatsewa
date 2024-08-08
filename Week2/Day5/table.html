@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <h1>Users table</h1>
+    <table
+      id="userDetails"
+      class="border border-collapse border-solid border-[black];"
+    >
+      <thead>
+        <tr>
+          <th class="border-solid border-[black] text-left p-2">ID</th>
+          <th class="border-solid border-[black] text-left p-2">Name</th>
+          <th class="border-solid border-[black] text-left p-2">Username</th>
+          <th class="border-solid border-[black] text-left p-2">Email</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p id="jsonContent"></p>
+    <script>
+        fetch("info.json")
+        .then((response)=>{return response.json();})
+        .then((data)=>{
+            let tableBody = document.getElementById("userDetails")
+            data.forEach((user)=>{
+                let row = document.createElement("tr")
+                row.innerHTML = `
+                    <td>${user.id}</td>
+                    <td>${user.name}</td>
+                    <td>${user.username}</td>
+                    <td>${user.email}</td>
+                `
+                tableBody.appendChild(row);
+            })
+        })
+    </script>
+  </body>
+</html>

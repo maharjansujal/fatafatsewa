@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <style>
+        .profile-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .profile-container h1 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container" id="profileContainer">
+        <h1 id="userName"></h1>
+        <p><strong>Email:</strong> <span id="userEmail"></span></p>
+        <p><strong>Phone:</strong> <span id="userPhone"></span></p>
+        <p><strong>Website:</strong> <span id="userWebsite"></span></p>
+        <a href="test2.html">Back to Users List</a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const userId = new URLSearchParams(window.location.search).get('id');
+            if (!userId) {
+                document.getElementById('profileContainer').innerText = 'User ID is missing';
+                return;
+            }
+
+            fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(user => {
+                    document.getElementById('userName').innerText = user.name;
+                    document.getElementById('userEmail').innerText = user.email;
+                    document.getElementById('userPhone').innerText = user.phone;
+                    document.getElementById('userWebsite').innerText = user.website;
+                })
+                .catch(error => {
+                    document.getElementById('profileContainer').innerText = `Error: ${error.message}`;
+                    console.error("Error fetching user data:", error);
+                });
+        });
+    </script>
+</body>
+</html>

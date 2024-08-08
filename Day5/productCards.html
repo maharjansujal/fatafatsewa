@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="max-w-6xl mx-auto p-4">
+      <div
+        id="product-container"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+      >
+      </div>
+    </div>
+    <script>
+      fetch("https://dummyjson.com/products")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Response was not ok");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          let product_container = document.getElementById("product-container");
+          data.products.forEach((product) => {
+            let product_card = document.createElement("div");
+            product_card.className = `bg-white shadow-md max-w-[390px] w-full rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer`;
+            product_card.innerHTML = `
+            <img class="w-full h-auto max-w-[330px] max-h-[200px] object-cover mx-auto" src="${product.thumbnail}" alt="${
+              product.title
+            }">
+            <div class="p-4">
+                <h2 class="text-xl font-bold mb-2 truncate">${product.title}</h2>
+                <div class="flex items-center mb-2">
+                    <span class="text-yellow-400 mr-2">${"★".repeat(Math.round(product.rating)
+                      
+                    )}${"☆".repeat(5 - Math.round(product.rating))}</span>
+                    <span class="text-gray-600">(${
+                      product.reviews.length
+                    } responses)</span>
+                </div>
+                <p class="text-xl font-semibold mb-4">€ ${product.price}</p>
+                <button class="w-full bg-black text-white py-2 rounded mb-2">ADD TO BAG</button>
+                <button class="w-full bg-gray-200 text-black py-2 rounded">WISHLIST</button>
+            </div>`;
+            product_card.addEventListener("click", () => {
+              window.location.href = `individualProduct.html?id=${product.id}`;
+            });
+            product_container.appendChild(product_card);
+          });
+        });
+    </script>
+  </body>
+</html>
