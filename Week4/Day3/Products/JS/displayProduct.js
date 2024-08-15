@@ -13,7 +13,7 @@ let displayProduct= ()=>{
             let product_card = document.createElement("div");
             product_card.className = `card bg-white shadow-md max-w-[390px] w-full rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer`;
             product_card.innerHTML = `
-            <img class="w-full h-auto max-w-[330px] max-h-[200px] object-cover mx-auto" src="${
+            <img class="w-300px h-300px object-cover mx-auto" src="${
               product.thumbnail
             }" alt="${product.title}">
             <div class="p-4">
